@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>Registration form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="registration.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="total">
+            <div id="firstlayer">
+                <h1 id='english_header' style="display:block">Registration</h1>
+                <h1 id='german_header' style="display:none">Anmeldung</h1>
+                <div id="secondlayer">
+                    
+                    
+                    
+                    <div id='english_version' style="display:block">
+                        <p>Please fill out the form.
+                            <img src="german.jpg" id='germanFlag_changeToEnglish'>
+                        </p>
+
+                        <fieldset id="logindetail">
+                            <legend>Login Detail</legend>
+                            <p>
+                                <label>User name*</label>
+                                <input type="text" id="username" pattern="[A-Za-z]*_*?.?-*?[A-Za-z]*?" required>
+                            </p>
+                            <p>
+                                <label>Password*</label>
+                                <input type="password" id="psw1" pattern="[A-Za-z0-9.?!#$%& ]" onkeyup='checkPasswords();' required>
+                            </p>
+                            <p>
+                                <label>Retype Password*</label>
+                                <input type="password" id="psw2" pattern="[A-Za-z0-9.?!#$%& ]" onkeyup='checkPasswords();' required>
+                                <img src="warn.png" id="psw_error" style=display:none>
+                                <img src="ok.png" id="psw_equal" style=display:none>
+                            </p>
+                        </fieldset>
+
+                        <fieldset id="userdata">
+                            <legend>User Data</legend>
+                            <p>
+                                <label>First Name*</label>
+                                <input type="text" id="firstname" pattern="[A-Za-z]{1,20}" required>
+                            </p>
+                            <p>
+                                <label>Middle Name</label>
+                            <input type="text" id="middlename" pattern="[A-Za-z]{1,20}">
+                            </p>
+                            <p>
+                                <label>Last Name*</label>
+                                <input type="text" id="lastname" pattern="[A-Za-z]{1,20}" required>
+                            </p>
+                            <p>
+                                <label>Email*</label>
+                                <input type="text" id="email" pattern="[A-Za-z]*_*?.*?-*?[A-Za-z]*?@[A-Za-z]*_*?.*?-*?[A-Za-z]*?.[a-z]{2,6}.*?[a-z]{2,5}?" required>
+                            </p>
+
+                        </fieldset>
+                        <br>
+                        <input type="submit"/>
+                    </div> <!end of english version>
+                    
+                    
+                    <div id='german_version' style="display:none;">
+                        <p>Ausfüllen Sie das Formular.
+                            <img src="english.jpg" id='englishFlag_changeToGerman'>
+                        </p>
+
+                        <fieldset id="logindetail">
+                            <legend>Login Einzelheiten</legend>
+                            <p>
+                                <label>Benutzer Name*</label>
+                                <input type="text" id="username" pattern="[A-Za-z]*_*?.?-*?[A-Za-z]*?" required>
+                            </p>
+                            <p>
+                                <label>Passwort*</label>
+                                <input type="password" id="psw1" pattern="[A-Za-z0-9.?!#$%& ]" onkeyup='checkPasswords();' required>
+                            </p>
+                            <p>
+                                <label>Wiederholung des Passworts*</label>
+                                <input type="password" id="psw2" pattern="[A-Za-z0-9.?!#$%& ]" onkeyup='checkPasswords();' required>
+                                <img src="warn.png" id="psw_error" style=display:none>
+                                <img src="ok.png" id="psw_equal" style=display:none>
+                            </p>
+                        </fieldset>
+
+                        <fieldset id="userdata">
+                            <legend>Benutzer Datei</legend>
+                            <p>
+                                <label>Vorname*</label>
+                                <input type="text" id="firstname" pattern="[A-Za-z]{1,20}" required>
+                            </p>
+                            <p>
+                                <label>Mittelname</label>
+                            <input type="text" id="middlename" pattern="[A-Za-z]{1,20}">
+                            </p>
+                            <p>
+                                <label>Nachname*</label>
+                                <input type="text" id="lastname" pattern="[A-Za-z]{1,20}" required>
+                            </p>
+                            <p>
+                                <label>Email*</label>
+                                <input type="text" id="email" pattern="[A-Za-z]*_*?.*?-*?[A-Za-z]*?@[A-Za-z]*_*?.*?-*?[A-Za-z]*?.[a-z]{2,6}.*?[a-z]{2,5}?" required>
+                            </p>
+
+                        </fieldset>
+                        <br>
+                        <input type="submit"/>
+                    </div> <!end of german version>
+                    
+                    
+                    
+                </div><!secondlayer>
+            </div><!firstlayer>
+        </div> <!total>
+    </body>
+    <script src='registration.js'></script>
+</html>
