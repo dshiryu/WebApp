@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Body Mass Index</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>BMI-Rechner</h1>
+        <form	action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php	" method="get">
+        <div class="All">
+            <fieldset class="Angaben">
+            <legend class="title">Angaben zur BMI-Rechnung</legend>
+            <table id="table">
+                <tr>
+                  <td>Gewicht</td>
+                  <td><input type="number" name="gewicht" value="60.0" step="0.1" size="5" required=""></td>
+                </tr>
+                <tr>
+                  <td>Größe</td>
+                  <td><input type="number" name="groesse" value="1.70" step="0.01" size="5" required></td>
+                </tr>
+            </table>
+            <br>
+            <fieldset class="Geschlecht">
+                <legend class="title">Geschlecht</legend>
+                    <input name="ges" type="radio">Männlich</input>
+                    <input name="ges" type="radio">Weiblich</input>
+                    <input name="ges" type="radio">Sonstiges</input>
+            </fieldset> 
+            <br> 
+            <table id="table">
+                <tr>
+                  <td>Name</td>
+                  <td><input type="text" placeholder="Max Muster"></td>
+                </tr>
+                <tr>
+                  <td>Email</td>
+                  <td><input type="text" placeholder="Email"></td>
+                </tr>
+            </table>
+               <br>
+            <div id="buttons">
+                <input type="submit">
+                <input type="reset">
+            </div>
+            <br> 
+            </fieldset>
+            
+            <p>Ihr Body Mass Index beträgt ____.</p>
+        
+        </div>
+    </form>
+        
+        <!--img src="http://icons.iconarchive.com/icons/designbolts/cute-social-2014/256/HTML5-icon.png">
+        <p>Source: <a href="newhtml1.html">IconArchive</a> 
+        </p-->
+    </body>
+</html>

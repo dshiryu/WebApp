@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    </head>
+    <body>
+        <script src="ub5.js"></script>
+        
+        <p id="random"></p>
+        <script>document.getElementById("random").innerHTML = randomNumber(5, 0, 5);</script>
+        
+        <p id="summe"></p>
+        <script>document.getElementById("summe").innerHTML = randomArray.reduce(summe, 0);</script>
+        
+        <p id="max"></p>
+        <script>document.getElementById("max").innerHTML = groessteZahl();</script>
+        
+        <button onclick="dayAlert()"> Date </button>
+        
+        <p id="result">
+            <input type="text" id="firstName" placeholder="First Name">
+            <input type="text" id="lastName" placeholder="Last Name">
+            <input type="number" id="givenAge" min="0" max="140">
+            <button onclick="document.getElementById('result').innerHTML = showResult()"> Show</button>
+        </p>
+              
+        <pre><script>universe(10);</script></pre>
+        
+        
+        
+    </body>
+</html>

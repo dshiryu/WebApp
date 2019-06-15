@@ -1,0 +1,59 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 80%;
+    position: fixed;
+}
+#total {
+    width: 800px;
+}
+#input{
+    padding: 50px;
+}
+#firstlayer{ 
+    background-color: rgb(220,220,220);
+    width: 50%;
+    padding: 20px 20px;
+}
+#secondlayer{ 
+    background-color: rgb(192,192,192);
+    padding: 20px 20px;
+}
+#thirdlayer{ 
+    background-color:rgb(220,220,220);
+    padding: 20px 20px;
+    text-align: center;
+}
+#thirdlayer legend{
+    text-align: left; 
+}
+legend{
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(220,220,220);
+}
+.button{
+    float: right;
+}
+table{
+    margin-left: 75px;
+}
+#gewichtlabel{
+    padding-left: 40px;
+    padding-right:15px;
+}
+#groesselabel{
+    padding-left:50px;
+    padding-right:15px;
+}
+#namelabel{
+    padding-left:50px;
+    padding-right:15px;
+}
+#emaillabel{
+    padding-left:52px;
+    padding-right:15px;
+}
+textarea { 
+    vertical-align: top; 
+    
+}​
