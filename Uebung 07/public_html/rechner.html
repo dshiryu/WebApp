@@ -41,15 +41,15 @@ and open the template in the editor.
                             <br/>
                         <div class="input">
                         <label id= "namelabel" for="name">Name</label>
-                        <input id= "nameinput" type="text" name="name" placeholder="Full Name"/>
+                        <input id= "nameinput" type="text" name="name" placeholder="Full Name" pattern="[A-Za-z]{1,20}\s[A-Za-z]{1,20}" />
                         <br/>
                         <br/>
                         <label id= "emaillabel" for="email">Email</label>
-                        <input id= "emailinput" type="email" name="email" placeholder="Email Address"/> 
+                        <input id= "emailinput" type="email" name="email" placeholder="Email Address" pattern="[A-Za-z]*_*?.*?-*?[A-Za-z]*?@[A-Za-z]*_*?.*?-*?[A-Za-z]*?.[a-z]{2,6}.*?[a-z]{2,5}?" /> 
                         <br/>
                         <br/>
                         <label id="anmerklabel" for="anmerkung" style="margin-left:19px ; padding-right:15px">Anmerkung</label>
-                        <textarea name="anmerk" rows="4" cols="20"></textarea>
+                        <textarea name="anmerk" rows="4" cols="20" pattern="[A-Za-z]*\s*\.*\/*\,*"></textarea>
                         </div>
                         <br/>
                         <div class="button">
@@ -81,5 +81,7 @@ and open the template in the editor.
             let result = gewicht / (groesse*groesse);
             document.getElementById("result").innerHTML = result.toFixed(2);
         }
+        
+        
     </script>
 </html>
