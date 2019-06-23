@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Registration form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Uebung2.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="total">
+            <div id="firstlayer">
+                <h1 id='english_header' style="display:block">Registration</h1>
+                <h1 id='german_header' style="display:none">Anmeldung</h1>
+                <div id="secondlayer">
+                        <form>                  
+                        <div id='english_version' style="display:block">
+                        <p>Please fill out the form.
+                            <img src="german.jpg" id='germanFlag_changeToEnglish'>
+                        </p>
+
+                        <fieldset id="logindetail">
+                            <legend>Login Detail</legend>
+                            <p>
+                                <label>User name*</label>
+                                <input type="text" id="usernameE" required>
+                            </p>
+                            <p>
+                                <label>Password*</label>
+                                <input type="password" id="psw1E" required>
+                            </p>
+                            <p>
+                                <label>Retype Password*</label>
+                                <input type="password" id="psw2E" onkeyup='checkPasswordsE();' required>
+                                <img src="warn.png" id="psw_errorE" style=display:none>
+                                <img src="ok.png" id="psw_equalE" style=display:none>
+                            </p>
+                        </fieldset>
+
+                        <fieldset id="userdata">
+                            <legend>User Data</legend>
+                            <p>
+                                <label>First Name*</label>
+                                <input type="text" id="firstnameE" required>
+                            </p>
+                            <p>
+                                <label>Middle Name</label>
+                            <input type="text" id="middlenameE">
+                            </p>
+                            <p>
+                                <label>Last Name*</label>
+                                <input type="text" id="lastnameE" required>
+                            </p>
+                            <p>
+                                <label>Email*</label>
+                                <input type="email" id="emailE" pattern="[a-z\d\S]*@{1}[A-Za-z]{2,}.{1}[a-z]{2,3}" required>
+                            </p>
+
+                        </fieldset>
+                        <br>
+                        <button id="submit" onclick="submitCheck(event)">Submit</button>
+                        
+                        <p id = "errormessage" style=display:none>The form has mistake(s)</p>
+                        <p id = "okmessage" style=display:none>The form is submitted successfully</p>
+                    </div> <!end of english version>
+                    </form>
+                    <form>
+                    <div id='german_version' style="display:none;">
+                        <p>Ausfüllen Sie das Formular.
+                            <img src="english.jpg" id='englishFlag_changeToGerman'>
+                        </p>
+
+                        <fieldset id="logindetail">
+                            <legend>Login Einzelheiten</legend>
+                            <p>
+                                <label>Benutzer Name*</label>
+                                <input type="text" id="usernameG" required>
+                            </p>
+                            <p>
+                                <label>Passwort*</label>
+                                <input type="password" id="psw1G" required>
+                            </p>
+                            <p>
+                                <label>Wiederholung des Passworts*</label>
+                                <input type="password" id="psw2G" onkeyup='checkPasswordsG();' required>
+                                <img src="warn.png" id="psw_errorG" style=display:none>
+                                <img src="ok.png" id="psw_equalG" style=display:none>
+                            </p>
+                        </fieldset>
+
+                        <fieldset id="userdata">
+                            <legend>Benutzer Datei</legend>
+                            <p>
+                                <label>Vorname*</label>
+                                <input type="text" id="firstnameG" required>
+                            </p>
+                            <p>
+                                <label>Mittelname</label>
+                            <input type="text" id="middlenameG">
+                            </p>
+                            <p>
+                                <label>Nachname*</label>
+                                <input type="text" id="lastnameG" required>
+                            </p>
+                            <p>
+                                <label>Email*</label>
+                                <input type="email" id="emailG" pattern="[a-z\d]*@{1}[A-Za-z]{2,}.{1}[a-z]{2,3}" required>
+                            </p>
+
+                        </fieldset>
+                        <br>
+                        <button id="submit" onclick="submitCheck(event)">Submit</button>                       
+                        <p id = "errormessage" style=display:none>Das Formular hat Fehler</p>
+                        <p id = "okmessage" style=display:none>Das Formular wurde erfolgreich gesendet</p>    
+                    </div> <!end of german version>
+                </form>           
+                </div><!secondlayer>
+            </div><!firstlayer>
+        </div> <!total>
+    </body>
+    <script src='Uebung2.js'></script>
+</html>

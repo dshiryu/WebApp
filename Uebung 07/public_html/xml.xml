@@ -1,0 +1,11 @@
+<myList>
+  <employee>
+    <firstName>John</firstName> <lastName>Doe</lastName> <email>jone@doe.com</email>
+  </employee>
+  <employee>
+    <firstName>Anna</firstName> <lastName>Smith</lastName> <email>anna@smith.com</email>
+  </employee>
+  <employee>
+    <firstName>Peter</firstName> <lastName>Jones</lastName> <email>peter@jones.com</email>
+  </employee>
+</myList>

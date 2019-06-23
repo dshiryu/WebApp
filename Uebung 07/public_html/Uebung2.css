@@ -1,0 +1,59 @@
+body{
+
+    position: fixed;
+
+}
+
+#total {
+
+    width: 800px;
+
+}
+
+#input{
+
+    padding: 50px;
+
+}
+
+#firstlayer{ 
+
+    background-color: rgb(220,220,220);
+
+    width: 50%;
+
+    padding: 20px 20px;
+
+}
+
+#secondlayer{ 
+
+    background-color: rgb(192,192,192);
+
+    padding: 20px 20px;
+
+}
+
+img{
+
+    max-width: 8%;
+
+    float: right;
+
+}
+
+label{
+
+    width: 150px;
+
+    display: inline-block;
+
+    text-align: right;
+
+}
+
+.button{
+
+    float: right;
+
+}
