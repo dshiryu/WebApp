@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+    <title>BMI-Rechner</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<link href="rechner.css" rel="stylesheet" type="text/css"/>
+<body>
+<img src="bmi-870x430.jpg" width="435" height="215" alt="decoration"/>
+<div id="total">
+    <div id="firstlayer">
+        <h1>BMI-Rechner</h1>
+        <div id="secondlayer">
+          <form action = "http://localhost:8080/RechnerNode.js" method="GET">
+                <fieldset>
+                    <legend>Angabeen zur BMI-Rechner</legend>
+                    <br/>
+                    <div class="input">
+                        <label id= "gewichtlabel" for="gewicht">Gewicht</label>
+                        <input id= "gewichtinput" type="number" name="gewicht" step="0.1" size="5" require>
+                        <br/>
+                        <br/>
+                        <label id= "groesselabel"for="größe">Größe</label>
+                        <input id= "groesseinput" type="number" name="groesse" step="0.01" size="5" required>
+                        <br/>
+                        <br/>
+                    </div>
+                    <fieldset id="thirdlayer">
+                        <legend style="border-style: solid;">Geschlecht</legend>
+                        <input type="radio" name="geschlecht" value="maennlich" />Männlich
+                        <input type="radio" name="geschlecht" value="weiblich"/>Weiblich
+                        <input type="radio" name="geschlecht" value="sonstiges" />Sonstiges
+                    </fieldset>
+                    <br/>
+                    <br/>
+                    <div class="input">
+                        <label id= "namelabel" for="name">Name</label>
+                        <input id= "nameinput" type="text" name="name" placeholder="Full Name" pattern="[A-Za-z]{1,20}\s[A-Za-z]{1,20}" required/>
+                        <br/>
+                        <br/>
+                        <label id= "emaillabel" for="email">Email</label>
+                        <input id= "emailinput" type="email" name="email" placeholder="Email Address"/>
+                        <br/>
+                        <br/>
+                        <label id="anmerklabel" for="anmerkung" style="margin-left:19px ; padding-right:15px">Anmerkung</label>
+                        <textarea name="anmerk" rows="4" cols="20" pattern ="[A-Za-z]*\s*\.*\/*\,*"></textarea>
+                    </div>
+                    <br/>
+                    <div class="button">
+                        <input type="submit">
+                        <input type="reset" value="Zuruecksetzen"/>
+                        <br/>
+                        <br/>
+                        <button id="js">BMI mit JS berechnen</button>
+                        <br/>
+                        <br/>
+                        <button id="ajax">BMI	&uumlber Ajax holen</button>
+                    </div>
+                </fieldset>
+
+                Ihr Body Mass Index beträgt
+                <span id="blank" style="border-bottom: solid;">____</span>
+                <span id="result" style="border-bottom: solid;"></span>
+        </div>
+    </div>
+</div>
+
+<br/>
+<a href="brewing.html">More information about BMI</a>
+</form>
+<script>
+    document.getElementById("js").addEventListener("click",rechnen);
+    function rechnen(){
+        let gewicht = document.getElementById("gewichtinput").value;
+        let groesse = document.getElementById("groesseinput").value;
+        let result = gewicht / (groesse*groesse/10000);
+        document.getElementById("result").innerHTML = result.toFixed(2);
+    }
+
+// code for Uebung8 exercise
+    let ajaxbutton = document.getElementById("ajax");
+    ajaxbutton.addEventListener("click", function(event){
+        let gewicht = document.getElementById("gewichtinput").value;
+        let groesse = document.getElementById("groesseinput").value;
+        var queryString = "http://localhost:8080/RechnerNode.js?gewicht=" + gewicht
+            + "&groesse=" + groesse;
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var elem = document.getElementById("result");
+                elem.innerHTML = this.responseText;
+                console.log(this.responseText);
+            }
+        };        
+        xmlhttp.open("GET", queryString , true);
+        xmlhttp.send();
+        document.getElementById("blank").style.display="none";
+        event.preventDefault();
+        },false);
+</script>
+</body>
+
+</html>
